@@ -403,7 +403,7 @@ Most of the techniques & conventions described here were developed in public, so
 * We utilise [focussed, lightweight JS libraries](http://microjs.com/) as needed.
 
 ## Javascript code consistency
-* We use [ESlint](http://eslint.org/) to ensure code consistency. We maintain a [common configuration](linting/eslint-config-bitcrowd).
+* We use [ESlint](http://eslint.org/) to ensure code consistency. We maintain a [common configuration](https://github.com/bitcrowd/javascript/).
 
 ## 3rd-party code
 * We use package managers whenever possible, primarily [npm](https://www.npmjs.com/) and [Bower](http://bower.io/).

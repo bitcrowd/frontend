@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-bitcrowd",
-  "version": "0.0.3",
-  "description": "bitcrowd eslint config",
+  "version": "0.0.4",
+  "description": "[DEPRECATED] bitcrowd eslint config",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
