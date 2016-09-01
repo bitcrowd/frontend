@@ -1,5 +1,9 @@
 # eslint-config-bitcrowd
 
+**!! THIS VERSION IS OUTDATED!
+PLEASE USE [HTTPS://GITHUB.COM/BITCROWD/JAVASCRIPT](https://github.com/bitcrowd/javascript)
+INSTEAD !!**
+
 [![npm version](https://badge.fury.io/js/eslint-config-bitcrowd.svg)](http://badge.fury.io/js/eslint-config-bitcrowd)
 
 This package provides bitcrowd's .eslintrc as an extensible shared config.
