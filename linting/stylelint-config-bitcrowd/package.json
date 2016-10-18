@@ -1,0 +1,32 @@
+{
+  "name": "stylelint-config-bitcrowd",
+  "version": "1.0.0",
+  "description": "Bitcrowd styelint config",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bitcrowd/frontend.git"
+  },
+  "keywords": [
+    "scss",
+    "sass",
+    "css",
+    "lint",
+    "bitcrowd",
+    "config",
+    "styleguide"
+  ],
+  "author": "bitcrowd GmbH. <info@bitcrowd.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bitcrowd/frontend/issues"
+  },
+  "homepage": "https://github.com/bitcrowd/frontend#readme",
+  "dependencies": {
+    "stylelint-config-standard": "^13.0.2",
+    "object-assign": "^4.1.0"
+  },
+  "peerDependencies": {
+    "stylelint": "^7.4.2"
+  }
+}
