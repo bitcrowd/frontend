@@ -250,7 +250,25 @@ Specificity starts low and ends high; earlier styles are wide-ranging, ending wi
 - `components` are chunks of UI built from objects. Could be a page-type (`.profile-page`), could be a distinct block or collection (`.sidebar`, `.author-bio`). There should be no ‘reaching inside’ objects to tweak styles here (that should be achieved using --modifiers on the object directly), rather just styles to define how each object should be laid out next to the others.
 - `trumps` (named after the 'trump suit' in card games, nothing to do with Donald) are high-specificity overrides and helper classes e.g. `.hidden`, `.text--center`. Use of `!important` is acceptable here; these classes are designed to override all other component classes.
 
-In general every object and component has a similarly-named file in the settings folder that contains all variables used for the component.
+Every object and component has an eponymous file in the settings folder that contains all variables used for the component. In a slight break from ITCSS principles, these settings files are `import`ed at the head of that object file:
+
+```scss
+// bitstyles/objects/_buttons.scss
+
+@import "../settings/buttons";
+
+.button {
+  …
+}
+```
+
+Global settings are still imported at the top of the manifest. As the objects’ settings (which will very likely depend on global settings) are self-imported, we can simply import the objects with one line:
+
+```scss
+// bitstyles/bitstyles.scss
+
+@import 'bitstyles/objects/button';
+```
 
 #### Read more:
 - [Harry Roberts - Managing CSS Projects with ITCSS](https://youtu.be/1OKZOV-iLj4?t=398)
@@ -259,13 +277,30 @@ In general every object and component has a similarly-named file in the settings
 - [CSS Specificity Generator](https://jonassebastianohlsson.com/specificity-graph/)
 - [The Specificity Graph](http://csswizardry.com/2014/10/the-specificity-graph/)
 
+### Prefixes
+
+Following the structure of ITCSS, we add prefixes to our classnames to aid in readability. At a glance you can see which strata the class belong to.
+
+- `.l-` - layout
+- `.o-` - object. An abstraction that could be used anywhere. Changes to styles here can affect many elements.
+- `.c-` - component. These are implementation-specific. Changes to styles here should only affect appearances in easily-predictable ways.
+- `.t-` - trump. Single-purpose classes that could be used anywhere. Changes to styles here can affect many elements.
+
+This not only helps you find the relevant source sass more easily, it also helps avoid clashes between class styles. For example layout classes should almost always be alone on an element; objects, trumps, and components should be nested within the layout structure rather than part of it. Component classes from multiple components should probably not be mixed on one element.
+
+#### Read more
+[More transparent UI Code with Namespaces](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/)
+
 ### Atomic OOBEMITSCSS (Yes really)
 Putting this all together results in an expressive system of reusable & composable components:
 
 ```html
-<header class="header box box--grey">
-  <h1 class="header__title h3"><span class="header__icon icon icon--twitter">…</span>Page title</h1>
-  <h2 class="header__subtitle h5">Page subtitle</h2>
+<header class="c-header o-box o-box--grey">
+  <h1 class="c-header__title o-h3">
+    <svg class="c-header__icon o-icon">…</svg>
+    Page title
+  </h1>
+  <h2 class="c-header__subtitle o-h5">Page subtitle</h2>
 </header>
 ```
 
@@ -284,7 +319,7 @@ Thus the example above shows that we compose several component classes *in HTML*
 There is one exception to the ‘do not nest’ rule — states. `:hover`, `:focus`, `:visited` etc. are of course all declared nested (look at the example below — could they be declared another way?), but also any non-HTML-standard states we define. For our own states the naming convention is to use `is-` & `has-` as prefixes e.g. `.is-active`, `.has-child`
 
 ```scss
-.button {
+.o-button {
   padding: 1em;
 
   &[disabled] {
@@ -316,19 +351,19 @@ Much like magic numbers in javascript functions, specifying styles using inline 
 A common example is a global margin/gutter/padding/spacing variable — we define this once, then use it throughout the site for consistent spacing — and colours.
 
 ```scss
-// settings/units.scss
+// settings/global.units.scss
 $general-margin: 1.5rem;
 
 
 // objects/button.scss
-.button {
+.o-button {
   padding-left: $general-margin;
   padding-right: $general-margin;
 }
 
 
-// objects/content.scss
-.content {
+// layout/content.scss
+.l-content {
   padding-left: $general-margin;
   padding-right: $general-margin;
 }
@@ -348,34 +383,34 @@ All good developers aim for DRY code and CSS is no exception. Mixins and functio
 If we nest our selectors, we limit the reusability of our classes, and make it hard to predict the appearance of an element:
 
 ```scss
-.title {
+.o-title {
   color: blue;
 }
 
 …
 
-.sidebar {
-  .title {
+.c-sidebar {
+  .o-title {
     color: red;
   }
 }
 ```
 
-If a developer places/copies a `title` into different parts of the app/site, it will have a different appearance, one that’s hard to predict without finding every instance of `.title` within the CSS. And if we suddenly need red titles somewhere else, do we duplicate these styles for each such instance?
+If a developer places/copies a `o-title` into different parts of the app/site, it will have a different appearance, one that’s hard to predict without finding every instance of `.o-title` within the CSS. And if we suddenly need red titles somewhere else, do we duplicate these styles for each such instance?
 
 Much better would be something like:
 
 ```scss
-.title {
+.o-title {
   color: blue;
 }
 
-.title--alt {
+.o-title--alt {
   color: red;
 }
 ```
 
-Now when a developer places a `title` it’ll behave consistently — every `.title--alt` looks like every other `.title--alt` without any magic rules based on where you place it.
+Now when a developer places a `.o-title` it’ll behave consistently — every `.o-title--alt` looks like every other `.o-title--alt` without any magic rules based on where you place it.
 
 Of course nesting does happen sometimes — there are definitely occasions where the alternative results in over-engineering classes. If a little nesting actually keeps CSS simpler than the alternative, do it.
 
