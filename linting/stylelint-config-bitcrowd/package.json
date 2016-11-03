@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Bitcrowd styelint config",
   "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run --silent lint"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/bitcrowd/frontend.git"
@@ -28,5 +32,10 @@
   },
   "peerDependencies": {
     "stylelint": "^7.4.2"
+  },
+  "devDependencies": {
+    "eslint": "^3.9.1",
+    "eslint-config-bitcrowd-base": "^8.0.0",
+    "eslint-plugin-import": "^1.16.0"
   }
 }
