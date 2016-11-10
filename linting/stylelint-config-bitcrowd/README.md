@@ -15,5 +15,7 @@ Install the package:
 Then add the package to your local `.stylelintrc`:
 
 ```json
+{
   "extends": "stylelint-config-bitcrowd"
+}
 ```
