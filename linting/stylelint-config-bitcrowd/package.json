@@ -27,11 +27,11 @@
   },
   "homepage": "https://github.com/bitcrowd/frontend#readme",
   "dependencies": {
-    "stylelint-config-standard": "^13.0.2",
+    "stylelint-config-standard": "^14.0.0",
     "object-assign": "^4.1.0"
   },
   "peerDependencies": {
-    "stylelint": "^7.4.2"
+    "stylelint": "^7.5.0"
   },
   "devDependencies": {
     "eslint": "^3.9.1",
