@@ -9,11 +9,13 @@ It is derived from [stylelint-config-standard](https://github.com/stylelint/styl
 Install the package:
 
 ```sh
-  npm --save-dev stylelint-config-bitcrowd
+  npm install --save-dev stylelint-config-bitcrowd
 ```
 
 Then add the package to your local `.stylelintrc`:
 
 ```json
-  "extends": "stylelint-config-bitcrowd",
+{
+  "extends": "stylelint-config-bitcrowd"
+}
 ```
