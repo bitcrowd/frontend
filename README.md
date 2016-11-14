@@ -286,7 +286,7 @@ Following the structure of ITCSS, we add prefixes to our classnames to aid in re
 - `.c-` - component. These are implementation-specific. Changes to styles here should only affect appearances in easily-predictable ways.
 - `.t-` - trump. Single-purpose classes that could be used anywhere. Changes to styles here can affect many elements.
 
-This not only helps you find the relevant source sass more easily, it also helps avoid clashes between class styles. For example layout classes should almost always be alone on an element; objects, trumps, and components should be nested within the layout structure rather than part of it. Component classes from multiple components should probably not be mixed on one element.
+This not only helps you find the relevant source Sass more easily, it also helps avoid clashes between class styles. For example layout classes should almost always be alone on an element; objects, trumps, and components should be nested within the layout structure rather than part of it. Component classes from multiple components should probably not be mixed on one element.
 
 #### Read more
 [More transparent UI Code with Namespaces](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/)
@@ -428,9 +428,9 @@ Most of the techniques & conventions described here were developed in public, so
 - [Brad Frost’s articles](http://bradfrost.com/blog/)
 
 ## Sass linting
-* We previously used [scss-lint](https://github.com/brigade/scss-lint) to ensure that our Sass conforms to a consistent standard, but have recently switched to use [stylelint](https://github.com/stylelint/stylelint). This repo still contains [our common configuration files](linting/sass/README.md) for the previous linter, new versions for Stylelint are TBA.
-* We are currently trialing [SC-5 Styleguide](https://github.com/SC5/sc5-styleguide) to generate a styleguide/codeguide from our inline documentation.
-* We use the [Autoprefixer](https://github.com/postcss/autoprefixer) postprocessor to generate browser-specific prefixes at build-time.
+* We use [stylelint](https://github.com/stylelint/stylelint) to lint our Sass. You can find our standard config files for Stylelint at [linting/stylelint-config-bitcrowd/](linting/stylelint-config-bitcrowd/).
+* We are currently using [SC-5 Styleguide](https://github.com/SC5/sc5-styleguide) to generate a styleguide/codeguide from our inline documentation.
+* We use a collection of [post-css](https://github.com/postcss/postcss) plugins to automate processing of our css output. This includes [Autoprefixer](https://github.com/postcss/autoprefixer) which generates browser-specific prefixes at build-time, based on our browser support requirements (meaning we almost never need to add any browser prefixes to our source). For our full build process, see the [package.json from bitstyles](https://github.com/bitcrowd/bitstyles/blob/master/package.json).
 
 ## Javascript
 * We write vanilla JS whenever possible.
