@@ -1,18 +1,9 @@
 module.exports = {
+  plugins: [
+    'stylelint-order'
+  ],
   rules: {
-    'at-rule-no-vendor-prefix': true,
-    'media-feature-name-no-vendor-prefix': true,
-    'property-no-vendor-prefix': true,
-    'selector-no-vendor-prefix': true,
-    'value-no-vendor-prefix': true,
-    'max-nesting-depth': 2,
-    'declaration-no-important': true,
-    'selector-no-id': true,
-    'declaration-block-no-duplicate-properties': true,
-    'no-unknown-animations': true,
-    'selector-no-type': true,
-    'no-descending-specificity': true,
-    'declaration-block-properties-order': [
+    'order/properties-order': [
       'position',
       'top',
       'right',
@@ -160,6 +151,18 @@ module.exports = {
       'set-link-source',
       'unicode-bidi',
       'speak'
-    ]
+    ],
+    'at-rule-no-vendor-prefix': true,
+    'media-feature-name-no-vendor-prefix': true,
+    'property-no-vendor-prefix': true,
+    'selector-no-vendor-prefix': true,
+    'value-no-vendor-prefix': true,
+    'max-nesting-depth': 2,
+    'declaration-no-important': true,
+    'selector-max-id': 0,
+    'declaration-block-no-duplicate-properties': true,
+    'no-unknown-animations': true,
+    'selector-max-type': 0,
+    'no-descending-specificity': true
   }
 };
