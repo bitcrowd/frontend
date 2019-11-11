@@ -154,7 +154,7 @@ module.exports = {
     ],
     'at-rule-no-vendor-prefix': true,
     'at-rule-no-unknown': [true, {
-      'ignoreAtRules': ['function', 'if', 'return', 'mixin', 'include', 'each']
+      ignoreAtRules: ['function', 'if', 'return', 'mixin', 'include', 'each']
     }],
     'media-feature-name-no-vendor-prefix': true,
     'property-no-vendor-prefix': true,
