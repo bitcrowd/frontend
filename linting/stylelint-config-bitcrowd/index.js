@@ -1,2 +1,4 @@
-Object.assign = Object.assign || require('object-assign'); // eslint-disable-line global-require
-module.exports = Object.assign({ extends: 'stylelint-config-standard' }, require('./overrides'));
+/* eslint-disable global-require */
+Object.assign = Object.assign || require('object-assign');
+
+module.exports = { extends: 'stylelint-config-standard', ...require('./overrides') };

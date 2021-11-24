@@ -1,7 +1,7 @@
 {
   "name": "stylelint-config-bitcrowd",
-  "version": "4.0.0",
-  "description": "Bitcrowd styelint config",
+  "version": "5.0.0",
+  "description": "Bitcrowd stylelint config",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "eslint": "^8.3.0",
-    "eslint-config-bitcrowd-base": "^8.0.0",
+    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.3"
   }
 }
