@@ -1,6 +1,6 @@
 module.exports = {
   plugins: [
-    'stylelint-order'
+    'stylelint-order',
   ],
   rules: {
     'order/properties-order': [
@@ -150,11 +150,11 @@ module.exports = {
       'page',
       'set-link-source',
       'unicode-bidi',
-      'speak'
+      'speak',
     ],
     'at-rule-no-vendor-prefix': true,
     'at-rule-no-unknown': [true, {
-      ignoreAtRules: ['function', 'if', 'return', 'mixin', 'include', 'each']
+      ignoreAtRules: ['function', 'if', 'return', 'mixin', 'include', 'each'],
     }],
     'media-feature-name-no-vendor-prefix': true,
     'property-no-vendor-prefix': true,
@@ -166,6 +166,6 @@ module.exports = {
     'declaration-block-no-duplicate-properties': true,
     'no-unknown-animations': true,
     'selector-max-type': 0,
-    'no-descending-specificity': true
-  }
+    'no-descending-specificity': true,
+  },
 };
