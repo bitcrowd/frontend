@@ -27,10 +27,8 @@
   },
   "homepage": "https://github.com/bitcrowd/frontend#readme",
   "dependencies": {
-    "object-assign": "^4.1.1",
-    "stylelint-config-standard": "^24.0.0",
-    "stylelint-order": "^5.0.0",
-    "stylelint-scss": "^4.0.0"
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-order": "^5.0.0"
   },
   "peerDependencies": {
     "stylelint": "^14.0.0"
