@@ -26,12 +26,13 @@
     "url": "https://github.com/bitcrowd/frontend/issues"
   },
   "homepage": "https://github.com/bitcrowd/frontend#readme",
-  "dependencies": {
-    "stylelint-config-standard-scss": "^3.0.0",
-    "stylelint-order": "^5.0.0"
-  },
   "peerDependencies": {
     "stylelint": "^14.0.0"
+  },
+  "dependencies": {
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-order": "^5.0.0"
   },
   "devDependencies": {
     "eslint": "^8.3.0",
