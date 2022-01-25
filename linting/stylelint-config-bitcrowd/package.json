@@ -26,18 +26,18 @@
     "url": "https://github.com/bitcrowd/frontend/issues"
   },
   "homepage": "https://github.com/bitcrowd/frontend#readme",
-  "dependencies": {
-    "object-assign": "^4.1.1",
-    "stylelint-config-standard": "^24.0.0",
-    "stylelint-order": "^5.0.0",
-    "stylelint-scss": "^4.0.0"
-  },
   "peerDependencies": {
     "stylelint": "^14.0.0"
+  },
+  "dependencies": {
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-order": "^5.0.0"
   },
   "devDependencies": {
     "eslint": "^8.3.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.3"
+    "eslint-plugin-import": "^2.25.3",
+    "stylelint": "^14.2.0"
   }
 }
