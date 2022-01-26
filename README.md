@@ -17,6 +17,5 @@ Tools and libraries used regularly at bitcrowd.
 * [nvm (node version manager)](https://github.com/creationix/nvm) - Enables use of multiple Node.js versions.
 * [Rbenv](https://github.com/rbenv/rbenv) - Enables use of multiple versions of Ruby.
 * [npm](https://www.npmjs.com/) - Package manager for Node.js.
-* [Gulp](http://gulpjs.com/) - JavaScript build and automation system.
-* [Grunt](http://gruntjs.com/) - Frontend JavaScript task runner.
+* [yarn](https://yarnpkg.com/) - Another package manager for Node.js.
 * [Pa11y](https://github.com/pa11y/pa11y) - Accessibility testing
