@@ -9,7 +9,7 @@ It is derived from [stylelint-config-standard-scss](https://github.com/stylelint
 Install the package:
 
 ```sh
-  npm install --save-dev stylelint-config-bitcrowd
+npm install --save-dev stylelint-config-bitcrowd
 ```
 
 Then add the package to your local `.stylelintrc`:
