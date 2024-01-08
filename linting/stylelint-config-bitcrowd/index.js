@@ -10,7 +10,6 @@ module.exports = {
     'color-function-notation': null,
     'declaration-block-no-duplicate-properties': true,
     'declaration-no-important': true,
-    'declaration-property-value-no-unknown': true,
     'max-nesting-depth': 2,
     'media-feature-name-no-vendor-prefix': true,
     'no-descending-specificity': true,

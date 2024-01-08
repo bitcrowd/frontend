@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-bitcrowd",
-  "version": "5.1.0",
+  "version": "6.0.0",
   "description": "Bitcrowd stylelint config",
   "main": "index.js",
   "scripts": {
