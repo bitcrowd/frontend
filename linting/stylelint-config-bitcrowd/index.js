@@ -2,7 +2,6 @@
 module.exports = {
   extends: [
     'stylelint-config-standard-scss',
-    'stylelint-config-prettier',
     'stylelint-config-property-sort-order-smacss',
   ],
   rules: {
@@ -11,6 +10,7 @@ module.exports = {
     'color-function-notation': null,
     'declaration-block-no-duplicate-properties': true,
     'declaration-no-important': true,
+    'declaration-property-value-no-unknown': true,
     'max-nesting-depth': 2,
     'media-feature-name-no-vendor-prefix': true,
     'no-descending-specificity': true,
@@ -20,7 +20,6 @@ module.exports = {
     'selector-max-id': 0,
     'selector-max-type': 0,
     'selector-no-vendor-prefix': true,
-    'string-quotes': 'single',
     'value-keyword-case': [
       'lower',
       {
