@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-bitcrowd",
-  "version": "5.1.0",
+  "version": "6.0.0",
   "description": "Bitcrowd stylelint config",
   "main": "index.js",
   "scripts": {
@@ -27,17 +27,20 @@
   },
   "homepage": "https://github.com/bitcrowd/frontend#readme",
   "peerDependencies": {
-    "stylelint": "^14.0.0"
+    "stylelint": "^16.1.0"
   },
   "dependencies": {
-    "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-property-sort-order-smacss": "^8.0.0",
-    "stylelint-config-standard-scss": "^3.0.0"
+    "stylelint-config-property-sort-order-smacss": "^10.0.0",
+    "stylelint-config-standard-scss": "^13.0.0"
   },
   "devDependencies": {
-    "eslint": "^8.3.0",
+    "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.3",
-    "stylelint": "^14.3.0"
+    "eslint-plugin-import": "^2.29.1",
+    "stylelint": "^16.1.0"
+  },
+  "engines": {
+    "node": "^18.16.0",
+    "npm": "^9.5.1"
   }
 }
